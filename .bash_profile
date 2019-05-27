@@ -17,7 +17,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # set GOPATH
-if [-d "$HOME/bin" ]; then
+if [ -d "$HOME/bin" ]; then
     export GOPATH=$HOME/go
     export PATH=$PATH:/usr/local/go/bin
 fi
