@@ -17,6 +17,7 @@ Plugin 'chiel92/vim-autoformat'
 Plugin 'dracula/vim'
 Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
