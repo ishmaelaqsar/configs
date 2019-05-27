@@ -14,6 +14,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'chiel92/vim-autoformat'
+Plugin 'dracula/vim'
+Plugin 'w0rp/ale'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,7 +48,6 @@ set smartcase	" Enable smart-case search
 set incsearch	" Searches for strings incrementally
  
 set autoindent	" Auto-indent new lines
-set cindent	" Use 'C' style program indenting
 set expandtab	" Use spaces instead of tabs
 set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
