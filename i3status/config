@@ -10,7 +10,7 @@ general {
     output_format = "i3bar"
     colors = true
     #color_good     = "#00FF00"
-    #color_degraded = "#FFFF00"
+    #color_degraded = "#FFFFFF"
     #color_bad = "#FF0000"
     interval = 5                    
 }
@@ -18,44 +18,44 @@ general {
 order += "volume master"
 order += "ethernet eth0"
 order += "wireless _first_"
-order += "load"
-order += "cpu_usage"
-order += "disk /"
-order += "battery 0"
-order += "time"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
+order += "load"
+#order += "cpu_usage"
+order += "disk /"
+order += "battery 0"
+order += "tztime local"
 
 volume master {
     format = " %volume"
-    format_muted = " (%volume)"
-    device = "default"
+    format_muted = " %volume"
+    device = "pulse"
     mixer = "Master"
     mixer_idx = 0                                        
 }
 
 ethernet eth0 {
-    format_up =  " Ω: %ip  "
-    format_down = " ∅ eth0  "
+    format_up =  " Ω: %ip"
+    format_down = " ∅ eth0"
 }
 
 
 wireless _first_ {
-    format_up = " (%essid - %quality) %ip"
+    format_up = " (%essid %quality) %ip"
     format_down = " down"
 }
 
 load {
-    format = " %1min "
+    format = " %1min"
 }
 
 cpu_usage {
-        format = "%usage "
+    format = "%usage"
         
 }
 
 disk "/" {
-    format = " %avail" 
+    format = " %free" 
 }
 
 run_watch DHCP {
@@ -70,6 +70,7 @@ run_watch VPN {
 
 battery 0 {
     format = "%status %percentage %remaining"
+    format_down = "No battery"
     path = "/sys/class/power_supply/BAT%d/uevent"
     status_bat = ""
     status_chr = ""
@@ -79,6 +80,6 @@ battery 0 {
     integer_battery_capacity = true
 }
 
-time {
+tztime local {
     format = " %d-%m-%Y %H:%M:%S"           
 }
