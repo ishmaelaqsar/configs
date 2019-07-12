@@ -35,11 +35,13 @@ filetype plugin indent on    " required
 "
 " Turn on syntax highlighting
 syntax on
+set t_Co=256
+set background=dark
+colorscheme dracula
 
 " General
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
-set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set visualbell	" Use visual bell (no beeping)
@@ -60,3 +62,4 @@ set ruler	" Show row and column ruler information
  
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
+
