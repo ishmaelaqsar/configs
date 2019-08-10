@@ -35,9 +35,11 @@ filetype plugin indent on    " required
 "
 " Turn on syntax highlighting
 syntax on
-colorscheme gruvbox
 set background=light   " Setting light mode
+
+colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
+let g:gruvbox_contrast_light = 'hard'
 
 " General
 set number	" Show line numbers
