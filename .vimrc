@@ -14,10 +14,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'chiel92/vim-autoformat'
-Plugin 'dracula/vim'
 Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,9 +35,9 @@ filetype plugin indent on    " required
 "
 " Turn on syntax highlighting
 syntax on
-set t_Co=256
-set background=dark
-colorscheme dracula
+colorscheme gruvbox
+set background=light   " Setting light mode
+let g:airline_theme = 'gruvbox'
 
 " General
 set number	" Show line numbers
