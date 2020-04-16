@@ -30,6 +30,7 @@ set background=light   " Setting light mode
 
 let g:airline_theme = 'gruvbox'
 let g:gruvbox_contrast_light = 'hard'
+colorscheme gruvbox
 
 " General
 set number	" Show line numbers
